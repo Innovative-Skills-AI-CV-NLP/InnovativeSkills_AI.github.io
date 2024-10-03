@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Page</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
-<body>
-    <h1>Hello World</h1>
+
+<body class="bg-dark text-white">
+    <button type="button"  id="btn-back-to-top" class="btn btn-secondary btn-floating btn-lg">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="container">
+        <h1 class="text-center pt-5">RAVE: Randomized Noise Shuffling for Fast and Consistent Video Editing with Diffusion
+            Models</h1>
+        <h3 class="text-center pt-2">Supplementary Material</h3>
+        <p class="pt-5"> In this supplementary file, we provide the full videos of the results shown in the paper, as
+            well as additional qualitative results. We also provide a demo code for our method. Please refer to the
+            corresponding section linked below for more details.</p>
+        <div>
+            <ul class="content-links">
+                <li><a href="#fig6">Our Results</a></li>
+                <li><a href="#fig7">Comparisons to Baselines - Figure 7</a></li>
+                <li><a href="#additional-comparison">Additional Comparisons to Baselines</a></li>
+                <li><a href="#extreme">Extreme Shape Editing</a></li>
+                <li><a href="#additional">Additional Qualitative Results</a></li>
+                <li><a href="#fig2">Comparison with Existing Attention Modules - Figure 2</a></li>
+                <li><a href="#fig5">Consistency Across Grids - Figure 5</a></li>
+                <li><a href="#fig8">Ablations - Figure 8</a></li>
+                <li><a href="#user-study">Examples from User Study</a></li>
+                <li><a href="#limitations">Limitations</a></li>
+            </ul>
+        </div>
+        <div class="text-center pt-3">
+            <div class="hr-c"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 id="fig6" class="pt-5"><a name="image-results" id="image-results"></a>Our Results</h2>
+        <div class="pt-3">
+            <p>
+                Here we include both the complete videos of the images shown in Figure 1 (teaser) and Figure 6 (qualitative results) and additional video-text pairs. Our model has ability to perform editing on a wide range of 
+            </p>
+        </div>
+        <div>
+            <ul>
+                <li> <b>video lengths</b> without requiring extra computational resources, e.g. 9 frames, 144 frames (<a href="#additional">Additional Qualitative Results</a>) .</li>
+                <li> <b>resolutions</b>, e.g., 512x320 (row 1), 512x512 (row 2).</li>
+                <li> <b>motions</b>, e.g. exo-motion (row 2), ego-motion (row 4), ego-exo motion (<a href="#additional-comparison">Additional Comparisons to Baselines</a> row 1), occlusions (<a href="#user-study">Examples from User Study</a> first comparison, 'a cheetah is moving'), multiple objects with appearances/disappearances (<a href="#additional">Additional Qualitative Results</a> row 1)</li>
+                <li> <b>objects</b>, e.g., humans (row 1 and 7), animals (row 2 and 3), vehicles (row 3).</li>
+                <li> <b>types of edits</b>, e.g. local editing (row 1 column 5), visual style editing (row 5 column 4), background editing (monkey, row 6 column 3), shape/attribute editing (row 2), extreme shape editing (<a href="#extreme">Extreme Shape Editing</a>), multiple editing types at once (background + shape editing, row 6 column 4) </li>
+                <li> <b>text detail levels</b>, e.g. long and detailed descriptions (<a href="#additional">Additional Qualitative Results</a> row 2 (bear), 3 (flamingo)), single word prompts (row 1 column 4)</li>
+            </ul>
+        </div>
+        <div class="">
+            <h4 class="pt-2 text-center text-xl-start">Sample Video 1</h4>
+        </div>
+        <div class="row gx-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+        </div>
+        <div class="">
+            <h4 class="pt-2">Sample Video 2</h4>
+        </div>
+        <div class="row gx-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="row gx-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-2">
+                <p class="gallery-card-header">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <video width="100%" src="assets/Fig1-teaser/typing/typing_source-new.mp4" controls muted></video>
+                <p>"an ancient Egyptian pharaoh is typing"</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <video width="100%" src="assets/Fig1-teaser/typing/egyptian.mp4" controls muted></video>
+                <p>"a skeleton is typing"</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <video width="100%" src="assets/extra/candidates/new/typing/skeleton.mp4" controls muted></video>
+                <p>"a zombie"</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <video width="100%" src="assets/Fig1-teaser/typing/zombie_typing.mp4" controls muted></video>
+                <p>"a man wearing a glitter jacket is typing"</p>
+            </div>
+        </div>
+        <!-- Repeat for other rows -->
+    </div>     -->
 </body>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
 </html>
