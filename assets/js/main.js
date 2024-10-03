@@ -23,3 +23,26 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const rows = document.querySelectorAll('.row'); // Select all rows
+
+  rows.forEach(row => {
+      const headers = row.querySelectorAll('.gallery-card-header'); // Select all headers in the row
+      let maxHeight = 0;
+
+      // Calculate the maximum height
+      headers.forEach(header => {
+          const height = header.offsetHeight;
+          if (height > maxHeight) {
+              maxHeight = height;
+          }
+      });
+
+      // Set the maximum height for all headers in the row
+      headers.forEach(header => {
+          header.style.height = maxHeight + 'px';
+      });
+  });
+});
