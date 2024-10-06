@@ -65,8 +65,8 @@
             <h4 class="pt-2 text-center">Sample Video 1</h4>
         </div>
         <div class="row gx-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
-            <div class="col">
-                <p class="gallery-card-header align-middle">Input Video - 90 frame</p>
+            <div class="col align-items-">
+                <p class="gallery-card-header align-middle" style="text-align: center;">Input Video - 90 frame</p>
                 <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
             </div>
             <div class="col">
@@ -87,7 +87,7 @@
             </div>
         </div>
         <div class="">
-            <h4 class="pt-2 text-center">Sample Video 2</h4>
+            <h4 class="pt-4 text-center">Sample Video 2</h4>
         </div>
         <div class="row gx-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
             <div class="col">
@@ -103,12 +103,125 @@
                 <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
             </div>
             <div class="col">
-                <p class="gallery-card-header">"a zombie is stretching"</p>
+                <p class="gallery-card-header">"a zombie is stretching a zombie is stretching"</p>
                 <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
             </div>
         </div>
+        <div class="text-center pt-5">
+            <div class="hr-c"></div>
+        </div>
     </div>
+
+    <div class="container">
+        <h2 id="fig7" align="left" class="pt-5"><a name="image-results" id="image-results"></a>Comparisons to Baselines - Figure 7</h2>
+        <div class="pt-3">
+            <p>
+                Here we put the complete videos of the images shown in Figure 7. We compare our method with videos used by previous approaches from DAVIS (row 1, 2) and a human video (row 3). We perform comparison with the following models.
+            </p>
+        </div>
+        <div>
+            <ul>
+                <li> RAVE w/o Shuffle: our method without the shuffling step.</li>
+                <li> Tokenflow (<a href="#ref-tokenflow">[1]</a>)</li>
+                <li> FateZero (<a href="#ref-fatezero">[2]</a>)</li>
+                <li> Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</li>
+                <li> Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</li>
+                <li> Pix2Video (<a href="#ref-p2v">[5]</a>)</li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                Note that we do not use any customized model (Realistic Vision v5.1) in videos below for fair comparison. Stable Diffusion v1.5 is used for RAVE.    
+            </p>
+        </div>
+        <div class="">
+            <!-- <h4 class="pt-2 text-center text-xl-start">Sample Video 1</h4> -->
+            <h4 class="pt-2 text-center">Sample Video 1</h4>
+        </div>
+        <div>
+            <p style="font-family: Chalkduster;"> <span><b>Prompt:</b></span> "Mysterious purple and blue hues dominate, with twinkling stars and a glowing moon in the backdrop"</p>
+        </div>
+        <div class="row gx-2 pb-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-lg-4 justify-content-center">
+            <div class="col align-items-">
+                <p class="gallery-card-header align-middle" style="text-align: center;">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">RAVE</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">RAVE w/o Shuffle </p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">FateZero (<a href="#ref-fatezero">[2]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Pix2Video (<a href="#ref-p2v">[5]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+        </div>
+
+        <div class="">
+            <!-- <h4 class="pt-2 text-center text-xl-start">Sample Video 1</h4> -->
+            <h4 class="pt-2 text-center">Sample Video 2</h4>
+        </div>
+        <div>
+            <p style="font-family: Chalkduster;"> <span><b>Prompt:</b></span> "a senior lady is running"</p>
+        </div>
+        <div class="row gx-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-lg-4 justify-content-center">
+            <div class="col align-items-">
+                <p class="gallery-card-header align-middle" style="text-align: center;">Input Video - 90 frame</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">RAVE</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">RAVE w/o Shuffle </p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">FateZero (<a href="#ref-fatezero">[2]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+            <div class="col">
+                <p class="gallery-card-header">Pix2Video (<a href="#ref-p2v">[5]</a>)</p>
+                <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

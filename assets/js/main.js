@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
   rows.forEach(row => {
       const headers = row.querySelectorAll('.gallery-card-header'); // Select all headers in the row
       let maxHeight = 0;
+      console.log(headers);
 
       // Calculate the maximum height
       headers.forEach(header => {
