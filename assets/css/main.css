@@ -54,11 +54,31 @@ a:hover {
 
 
 .video-scroll-container {
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent line breaks */
+  overflow-x: hidden; /* Default to hidden overflow */
 }
 
-.video-scroll-container .row {
-  display: inline-flex; /* Align items in a row */
-  flex-wrap: nowrap; /* Prevent line breaks */
+@media (max-width: 576px) {
+  .video-scroll-container {
+      overflow-x: auto; /* Enable horizontal scrolling on small devices */
+      white-space: nowrap; /* Prevent line breaks */
+  }
+
+  .video-scroll-container .row {
+    display: inline-flex; /* Align items in a row */
+    flex-wrap: nowrap; /* Prevent line breaks */
+  }
+
+  .video-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+    justify-content: center; /* Center align the content */
+    height: 250px; /* Set a fixed height for the video wrapper */
+  }
+
+  .video {
+      width: 250px; /* Make the video take the full width of the wrapper */
+      height: auto; /* Maintain aspect ratio */
+      max-height: 100%; /* Ensure the video does not exceed the wrapper height */
+  }
 }
