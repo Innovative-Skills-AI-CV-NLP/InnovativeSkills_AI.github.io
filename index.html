@@ -15,7 +15,7 @@
 </head>
 
 <body class="bg-dark text-white">
-    <button type="button"  id="btn-back-to-top" class="btn btn-secondary btn-floating btn-lg">
+    <button style="z-index: 100;" type="button" id="btn-back-to-top" class="btn btn-secondary btn-floating btn-lg">
         <i class="fas fa-arrow-up"></i>
     </button>
     <div class="container">
@@ -139,7 +139,7 @@
             <h4 class="pt-2 text-center">Sample Video 1</h4>
         </div>
         <div>
-            <p style="font-family: Chalkduster;"> <span><b>Prompt:</b></span> "Mysterious purple and blue hues dominate, with twinkling stars and a glowing moon in the backdrop"</p>
+            <p style="font-family: Chalkduster;"><b>Prompt:</b> <i>"Mysterious purple and blue hues dominate, with twinkling stars and a glowing moon in the backdrop"</i></p>
         </div>
         <div class="row gx-2 pb-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-lg-4 justify-content-center">
             <div class="col align-items-">
@@ -181,9 +181,11 @@
             <h4 class="pt-2 text-center">Sample Video 2</h4>
         </div>
         <div>
-            <p style="font-family: Chalkduster;"> <span><b>Prompt:</b></span> "a senior lady is running"</p>
+            <p style="font-family: Chalkduster;"><b>Prompt:</b> <i>"a senior lady is running"</i></p>
         </div>
-        <div class="row gx-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-lg-4 justify-content-center">
+
+        <div class="">
+        <div class="row gx-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-lg-4 justify-content-center">
             <div class="col align-items-">
                 <p class="gallery-card-header align-middle" style="text-align: center;">Input Video - 90 frame</p>
                 <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
@@ -217,11 +219,37 @@
                 <video width="100%" src="assets/results/lady_talking/Minnas.mp4" controls muted></video>
             </div>
         </div>
+        </div>
 
+        <div class="text-center pt-4">
+            <div class="hr-c"></div>
+        </div>
     </div>
 
-    <div class="pt-5 pb-5">
-
+    <div class="container">
+        <h2 class="pt-5 text-center">Reference</h2>
+        <div>
+            <p>
+                <a name="ref-tokenflow" id="ref-tokenflow"></a>
+                [1] Michal Geyer, Omer Bar-Tal, Shai Bagon, and Tali Dekel. Tokenflow: Consistent diffusion features for consistent video editing. arXiv preprint arXiv:2307.10373, 2023.
+            </p>
+            <p>
+                <a name="ref-fatezero" id="ref-fatezero"></a>
+                [2] Chenyang QI, Xiaodong Cun, Yong Zhang, Chenyang Lei, Xintao Wang, Ying Shan, and Qifeng Chen. Fatezero: Fusing attentions for zero-shot text-based video editing. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 15932–15942, 2023.
+            </p>
+            <p>
+                <a name="ref-rerender" id="ref-rerender"></a>
+                [3] Shuai Yang, Yifan Zhou, Ziwei Liu, , and Chen Change Loy. Rerender a video: Zero-shot text-guided video-to-video translation. In ACM SIGGRAPH Asia Conference Proceedings, 2023.
+            </p>
+            <p>
+                <a name="ref-t2v" id="ref-t2v"></a>
+                [4] Levon Khachatryan, Andranik Movsisyan, Vahram Tadevosyan, Roberto Henschel, Zhangyang Wang, Shant Navasardyan, and Humphrey Shi. Text2video-zero: Text-to-image diffusion models are zero-shot video generators. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 15954–15964, 2023.
+            </p>
+            <p>
+                <a name="ref-p2v" id="ref-p2v"></a>
+                [5] Duygu Ceylan, Chun-Hao P Huang, and Niloy J Mitra. Pix2video: Video editing using image diffusion. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 23206–23217, 2023.
+            </p>
+        </div>
     </div>
 
 </body>

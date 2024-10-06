@@ -51,3 +51,14 @@ a:hover {
   margin: 0;
   text-align: center;
 }
+
+
+.video-scroll-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.video-scroll-container .row {
+  display: inline-flex; /* Align items in a row */
+  flex-wrap: nowrap; /* Prevent line breaks */
+}
