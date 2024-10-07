@@ -51,11 +51,17 @@ a:hover {
   padding: .25rem;
   margin: 0;
   text-align: center;
+  white-space: normal;
 }
 
 
-.video-scroll-container {
+.horizontal-video-scroll {
   overflow-x: hidden; /* Default to hidden overflow */
+}
+
+.vertical-video-scroll {
+  overflow-x: hidden; /* Default to hidden overflow */
+  overflow-y: hidden;
 }
 
 .bg-1{
@@ -85,6 +91,7 @@ a:hover {
       overflow-x: auto; /* Enable horizontal scrolling on small devices */
       white-space: nowrap; /* Prevent line breaks */
       border: 1px solid white;
+      border-radius: 15px;
   }
 
   .horizontal-video-scroll .row {
@@ -112,6 +119,7 @@ a:hover {
     height:580px; 
     overflow-y: scroll; 
     border: 1px solid white;
+    border-radius: 15px;
   }
 }
 
