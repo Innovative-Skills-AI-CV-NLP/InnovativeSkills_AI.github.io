@@ -46,7 +46,8 @@ a:hover {
 }
 
 .gallery-card-header{
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-color: #212d3e;
   padding: .25rem;
   margin: 0;
   text-align: center;
@@ -57,13 +58,36 @@ a:hover {
   overflow-x: hidden; /* Default to hidden overflow */
 }
 
+.bg-1{
+  background-color: #0a0e19 !important;
+  /* color: white; or 
+  color1: #d9d9d9;
+
+  */
+}
+
+.bg-2{
+  background-color: #191009 !important;
+  /* 
+  color: white;
+  header-bg-color: #161f2c; or
+  header-bg-color: #212d3e;
+   */
+}
+
+.text-1{}
+
+.bg-2{}
+
+
 @media (max-width: 576px) {
-  .video-scroll-container {
+  .horizontal-video-scroll {
       overflow-x: auto; /* Enable horizontal scrolling on small devices */
       white-space: nowrap; /* Prevent line breaks */
+      border: 1px solid white;
   }
 
-  .video-scroll-container .row {
+  .horizontal-video-scroll .row {
     display: inline-flex; /* Align items in a row */
     flex-wrap: nowrap; /* Prevent line breaks */
   }
@@ -77,8 +101,27 @@ a:hover {
   }
 
   .video {
-      width: 250px; /* Make the video take the full width of the wrapper */
+      width: 300px; /* Make the video take the full width of the wrapper */
       height: auto; /* Maintain aspect ratio */
       max-height: 100%; /* Ensure the video does not exceed the wrapper height */
   }
+
+  .vertical-video-scroll {
+    /* overflow-x: auto; */
+    /* white-space: nowrap; */
+    height:580px; 
+    overflow-y: scroll; 
+    border: 1px solid white;
+  }
 }
+
+/* padding for the gallery */
+
+/* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, .25rem);
+  padding-left: var(--bs-gutter-x, 0.25rem);
+  margin-right: auto;
+  margin-left: auto;
+} */
+
