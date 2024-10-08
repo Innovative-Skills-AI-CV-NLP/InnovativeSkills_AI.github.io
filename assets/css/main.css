@@ -45,6 +45,10 @@ a:hover {
   max-width: 250px !important;
 }
 
+.gallery-card-video{
+  
+}
+
 .gallery-card-header{
   /* background-color: #000000; */
   background-color: #212d3e;
@@ -54,6 +58,15 @@ a:hover {
   white-space: normal;
 }
 
+.rounded-top-2 {
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: .5rem !important;
+}
+
+.rounded-bottom-2 {
+  border-bottom-right-radius: .5rem !important;
+  border-bottom-left-radius: .5rem !important;
+}
 
 .horizontal-video-scroll {
   overflow-x: hidden; /* Default to hidden overflow */
