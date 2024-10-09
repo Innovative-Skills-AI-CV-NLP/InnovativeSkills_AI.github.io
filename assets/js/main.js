@@ -24,49 +24,59 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   const rows = document.querySelectorAll('.row'); // Select all rows
 
-document.addEventListener("DOMContentLoaded", function() {
-  const rows = document.querySelectorAll('.row'); // Select all rows
+//   rows.forEach(row => {
+//       const headers = row.querySelectorAll('.gallery-card-header'); // Select all headers in the row
+//       let maxHeight = 0;
+//       console.log(headers);
 
-  rows.forEach(row => {
-      const headers = row.querySelectorAll('.gallery-card-header'); // Select all headers in the row
-      let maxHeight = 0;
-      console.log(headers);
+//       // Calculate the maximum height
+//       headers.forEach(header => {
+//           const height = header.offsetHeight;
+//           if (height > maxHeight) {
+//               maxHeight = height;
+//           }
+//       });
 
-      // Calculate the maximum height
-      headers.forEach(header => {
-          const height = header.offsetHeight;
-          if (height > maxHeight) {
-              maxHeight = height;
-          }
-      });
+//       // Set the maximum height for all headers in the row
+//       headers.forEach(header => {
+//           header.style.height = maxHeight + 'px';
+//       });
+//   });
+// });
 
-      // Set the maximum height for all headers in the row
-      headers.forEach(header => {
-          header.style.height = maxHeight + 'px';
-      });
+
+const max_height_in_row = (row, elm_cls, return_elms = true) => {
+  const elms = row.querySelectorAll(elm_cls);
+  let max_height = 0;
+
+  elms.forEach(elm => {
+    const height = elm.offsetHeight;
+    if (height > max_height) {
+      max_height = height;
+    }
   });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
+  return return_elms ? [elms, max_height] : max_height;
+}
+
+// document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
   const rows = document.querySelectorAll('.row'); // Select all rows
 
   rows.forEach(row => {
-      const headers = row.querySelectorAll('.gallery-card-video'); // Select all headers in the row
-      let maxHeight = 0;
-      console.log(headers);
-
-      // Calculate the maximum height
-      headers.forEach(header => {
-          const height = header.offsetHeight;
-          if (height > maxHeight) {
-              maxHeight = height;
-          }
-      });
-
+      let [headers, max_header_height] = max_height_in_row(row, '.gallery-card-header');
+      let [videos, max_video_height] = max_height_in_row(row, '.gallery-card-video');
+      // console.log(headers, max_header_height, videos, max_video_height);
       // Set the maximum height for all headers in the row
       headers.forEach(header => {
-          header.style.height = maxHeight + 'px';
+          header.style.height = max_header_height + 'px';
       });
+
+      videos.forEach(video => {
+        video.style.height = max_video_height + 'px';
+    });
   });
 });
